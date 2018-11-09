@@ -8,17 +8,26 @@
     android:orientation="vertical">
 
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <EditText
-        android:id=""
+        android:id="@+id/editTextLogin"
         android:layout_width="300dp"
         android:layout_height="60dp"
+        android:layout_marginTop="50dp"
         android:text="Mail"
-        android:layout_marginTop="50dp"/>
+        android:onClick="deleteText"
+        />
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

@@ -19,9 +19,9 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        editTxtLogin = (EditText)findViewById(R.id.edittext);
+        editTxtLogin = (EditText)findViewById(R.id.editTextLogin);
         System.out.println("---[DEBUG]---\n\neditTxtLogin: " + editTxtLogin.getId());
-        editTxtPassword = (EditText)findViewById(R.id.edittext);
+        editTxtPassword = (EditText)findViewById(R.id.editTextPassword);
         System.out.println("editTxtPassword: " + editTxtPassword.getId());
     }
 
@@ -29,7 +29,7 @@ public class SignIn extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 context);
 
-        alertDialogBuilder.setTitle("Your Title");
+        alertDialogBuilder.setTitle("[Error]");
         alertDialogBuilder
                 .setMessage("Login or password invalid!")
                 .setCancelable(false)
@@ -46,6 +46,10 @@ public class SignIn extends AppCompatActivity {
         else {
             startActivity(new Intent(this, Lobby.class));
         }
+    }
+
+    public void deleteText(View view) {
+        editTxtLogin.setText("");
     }
 
 
