@@ -21,4 +21,6 @@ public class MainActivity extends AppCompatActivity {
     public void pageUp (View view) {
         startActivity(new Intent(this, SignUp.class));
     }
+
+
 }

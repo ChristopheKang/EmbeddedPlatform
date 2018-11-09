@@ -8,29 +8,42 @@
     android:orientation="vertical">
 
     <EditText
+        android:id="@+id/editTextName"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:text="Name"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:onClick="deleteTextName"/>
 
     <EditText
+        android:id="@+id/editTextSurname"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:text="Surname"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:onClick="deleteTextSurname"/>
 
 
     <EditText
+        android:id="@+id/editTextMail"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:text="Mail"
+        android:layout_marginTop="50dp"
+        android:onClick="deleteTextMail"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
         android:layout_marginTop="50dp"/>
     <Button
         android:id="@+id/buttonSignup2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Confirm"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="35dp"
         android:onClick="pageConfirm1"/>
 
 
