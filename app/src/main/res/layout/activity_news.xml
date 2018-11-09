@@ -10,11 +10,99 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textSize="30dp"
+        android:layout_height="60dp"
         android:gravity="center"
         android:text="NEWS"
-        />
+        android:textSize="30sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="177dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginRight="10px">
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    app:srcCompat="@drawable/women_yoga" />
+
+                <ImageButton
+                    android:id="@+id/imageButton1"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    app:srcCompat="@drawable/weights" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    app:srcCompat="@drawable/bath_towels" />
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="10px">
+
+                <TextView
+                    android:id="@+id/textViewNews"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:text="New Yoga class on Monday Night!"
+                    android:textAlignment="textStart"
+                    android:textColor="?android:attr/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewNews2"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:text="Monthly Gym Report"
+                    android:textAlignment="textStart"
+                    android:textColor="?android:attr/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewNews3"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:text="Security and Hygiene in the gym"
+                    android:textAlignment="textStart"
+                    android:textColor="?android:attr/colorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textViewNews4"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:text="Some other news"
+                    android:textAlignment="textStart"
+                    android:textColor="?android:attr/colorPrimary"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 
 </LinearLayout>

@@ -16,5 +16,20 @@
         android:text="BOOKING"
         />
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:text="Pick a date to book a trainer"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorEdgeEffect"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>
