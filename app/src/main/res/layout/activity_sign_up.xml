@@ -4,38 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".SignUp"
     android:orientation="vertical">
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:text="Name"
-        android:layout_marginTop="50dp"
-        android:onClick="deleteTextName"/>
+        android:hint="Surname"
+        android:layout_marginTop="50dp"/>
 
     <EditText
         android:id="@+id/editTextSurname"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:text="Surname"
-        android:layout_marginTop="50dp"
-        android:onClick="deleteTextSurname"/>
+        android:hint="Name"
+        android:layout_marginTop="50dp"/>
 
 
     <EditText
         android:id="@+id/editTextMail"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:text="Mail"
-        android:layout_marginTop="50dp"
-        android:onClick="deleteTextMail"/>
+        android:hint="Mail"
+        android:layout_marginTop="50dp"/>
 
     <EditText
+        android:id="@+id/editTextPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPassword"
         android:layout_marginTop="50dp"/>
     <Button
@@ -44,7 +43,7 @@
         android:layout_height="wrap_content"
         android:text="Confirm"
         android:layout_marginTop="35dp"
-        android:onClick="pageConfirm1"/>
+        android:onClick="onSignUpClick"/>
 
 
 </LinearLayout>

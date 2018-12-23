@@ -5,39 +5,61 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SignUp extends AppCompatActivity {
 
-    final Context context = this;
     EditText editTxtName;
     EditText editTxtSurname;
     EditText editTxtMail;
+    EditText editTxtPassword;
+    Button signupBtn;
+    DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
         editTxtName = (EditText)findViewById(R.id.editTextName);
-        System.out.println(editTxtName.getId());
+
         editTxtSurname = (EditText)findViewById(R.id.editTextSurname);
-        System.out.println(editTxtSurname.getId());
+
         editTxtMail = (EditText)findViewById(R.id.editTextMail);
-        System.out.println(editTxtMail.getId());;
+
+        editTxtPassword = (EditText)findViewById(R.id.editTextPassword);
+
+        signupBtn = (Button)findViewById(R.id.buttonSignup2);
     }
 
-    public void pageConfirm1 (View view) {
-        startActivity(new Intent(this, MainActivity.class));
-    }
 
 
-    public void deleteTextName(View view) {
-        editTxtName.setText("");
+    public void onSignUpClick(View v){
+        if(v.getId() == R.id.buttonSignup2)
+        {
+
+
+            String namestr = editTxtName.getText().toString();
+            String emailstr = editTxtMail.getText().toString();
+            String pass1str = editTxtPassword.getText().toString();
+            String surnstr = editTxtSurname.getText().toString();
+
+
+            //insert the details in DB:
+             Contact c = new Contact();
+             c.setName(namestr);
+             c.setEmail(emailstr);
+             c.setPass(pass1str);
+             c.setUname(surnstr);
+
+             helper.insertContact(c);
+
+            startActivity(new Intent(this, MainActivity.class));
+
+
+        }
     }
-    public void deleteTextSurname(View view) {
-        editTxtSurname.setText("");
-    }
-    public void deleteTextMail(View view) {
-        editTxtMail.setText("");
-    }
+
 }

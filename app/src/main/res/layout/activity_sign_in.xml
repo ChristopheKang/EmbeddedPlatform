@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".SignIn"
     android:orientation="vertical">
 
 
@@ -17,12 +17,11 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextLogin"
+        android:id="@+id/editTextUser"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_marginTop="50dp"
-        android:text="Mail"
-        android:onClick="deleteText"
+        android:hint="Surname"
         />
 
 
@@ -32,16 +31,17 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp"
+        android:hint="Passwrd"/>
 
 
     <Button
-        android:id="@+id/buttonSignup2"
+        android:id="@+id/buttonSignIn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Confirm"
         android:layout_marginTop="50dp"
-        android:onClick="pageConfirm2"
+        android:onClick="onSigninClick"
  />
 
 

@@ -8,49 +8,49 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SignIn extends AppCompatActivity {
 
     final Context context = this;
-    EditText editTxtLogin;
+    EditText editTxtUser;
     EditText editTxtPassword;
+
+    DatabaseHelper helper = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        editTxtLogin = (EditText)findViewById(R.id.editTextLogin);
-        System.out.println("---[DEBUG]---\n\neditTxtLogin: " + editTxtLogin.getId());
+
+        editTxtUser = (EditText)findViewById(R.id.editTextUser);
+
         editTxtPassword = (EditText)findViewById(R.id.editTextPassword);
-        System.out.println("editTxtPassword: " + editTxtPassword.getId());
+
+
+
+
+
     }
 
-    public void pageConfirm2 (View view) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context);
 
-        alertDialogBuilder.setTitle("[Error]");
-        alertDialogBuilder
-                .setMessage("Login or password invalid!")
-                .setCancelable(false)
-                .setPositiveButton("Close",new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog,int id) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alertDialog = alertDialogBuilder.create();
+    public void onSigninClick(View v){
+        if(v.getId() == R.id.buttonSignIn2)
+        {
+            String str = editTxtUser.getText().toString();
+            String pass = editTxtPassword.getText().toString();
 
-        if (this.editTxtLogin.getText().length() <= 0 || this.editTxtPassword.getText().length() <= 0) {
-            alertDialog.show();
+            String password = helper.searchPass(str);
+            if(pass.equals(password))
+            {
+                Intent i = new Intent(SignIn.this, Lobby.class);
+                startActivity(i);
+            }
+            else{//popup msg:
+                Toast temp = Toast.makeText(SignIn.this, "username & passwords don't match", Toast.LENGTH_LONG);
+                temp.show();}
         }
-        else {
-            startActivity(new Intent(this, Lobby.class));
-        }
-    }
 
-    public void deleteText(View view) {
-        editTxtLogin.setText("");
     }
-
 
 }
