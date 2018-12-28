@@ -6,17 +6,18 @@ it provides a way for users to sign in, login, find useful informations about th
 book and get schedules for their trainning.
 
 
-Here is a description of the assignements:
+Here is a description of the assignments:
 
-Assignement 1:
+Assignment 1:
   We made the core of the application with its different pages and UI elements.
   The pages are: log in, sign up, landing page, news and schedule.
-  This was made following this tutorial: https://stackoverflow.com/questions/24692758
   
-Assignement 2:
+Assignment 2:
   The connection to the app has been made; implementation of the sign in and sign up methods.
   Users are saved within the data base in SQLite.
+  This was made following this tutorial: https://stackoverflow.com/questions/24692758
 
-Assignement 4:
+Assignment 4:
+  Function 2:
   The news UI was improved and articles were added, even though they are not fully implemented to the database.
  
